@@ -36,7 +36,7 @@ This fork is a modified version of it.
   4. Some Guides and LUA Scripts, namely:
      - How to make Old World Flying possible in 3.3.5a and before
     
-  5. (NOT INCLUDED IN THE REPO) I adapted a multitude of things on my server. If you are interested, then let me know. These are:
+  5. (NOT INCLUDED IN THE REPO) I adapted a multitude of things on my server. If you are interested, then let me know. Many of them include .dbc edits that have to be delivered in a .mpq file to the client. These are:
      - Adding an own faction that allows buying talent points after reaching exalted (with small daily quests, etc.)
      - Changing and adding a range of spells to easen up the life of solo players. They are added & managed by an additional LUA-Script.
         - Everyone gets Aspect of the Uber Cheetah (40% Movespeed, No Daze, Usable with other Aspects if you are a Hunter)
