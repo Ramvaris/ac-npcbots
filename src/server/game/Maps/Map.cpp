@@ -718,6 +718,14 @@ void Map::RemoveFromMap(T* obj, bool remove)
     if (!inWorld) // pussywizard: if was in world, RemoveFromWorld() called DestroyForNearbyPlayers()
         obj->DestroyForNearbyPlayers(); // pussywizard: previous player->UpdateObjectVisibility()
 
+    // This should prevent double removals and therefore crashes under heavy-load
+    if (!obj->IsInGrid())
+    {
+        // Log detailed information about the object that triggered this supposedly impossible state.
+        LOG_ERROR("maps", "Object (GUID: {}, Entry: {}, Type: {}) was not in grid when it should have been. Aborting operation.", obj->GetGUID().ToString(), obj->GetEntry(), obj->GetTypeId());
+        return;
+    }
+
     obj->RemoveFromGrid();
 
     obj->ResetMap();

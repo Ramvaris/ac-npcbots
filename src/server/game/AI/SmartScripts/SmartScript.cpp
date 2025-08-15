@@ -43,6 +43,104 @@
 //  see: https://github.com/azerothcore/azerothcore-wotlk/issues/9766
 #include "GridNotifiersImpl.h"
 
+#include <unordered_map> // Make sure this is included
+
+// Maximum allowed nested calls of any kind to prevent a stack overflow
+#define MAX_GLOBAL_RECURSION_DEPTH 20
+// Maximum allowed nested calls for the same event to prevent simple infinite loops
+#define MAX_PER_EVENT_RECURSION 3
+
+// Global depth counter variable
+thread_local uint32_t g_smartScriptGlobalDepth = 0;
+
+// Custom hash function for std::tuple to be used with std::unordered_map
+namespace
+{
+    // Hashing function used to combine hashes, similar to boost::hash_combine
+    template <class T>
+    inline void hash_combine(std::size_t& seed, const T& v)
+    {
+        std::hash<T> hasher;
+        seed ^= hasher(v) + 0x9e3779b9 + (seed << 6) + (seed >> 2);
+    }
+
+    struct TupleHasher
+    {
+        std::size_t operator()(const std::tuple<int32_t, uint8_t, uint32_t>& t) const
+        {
+            std::size_t seed = 0;
+            hash_combine(seed, std::get<0>(t));
+            hash_combine(seed, std::get<1>(t));
+            hash_combine(seed, std::get<2>(t));
+            return seed;
+        }
+    };
+} // end anonymous namespace
+
+// The counter map (per event), now using the more performant std::unordered_map
+// Key -> A "tuple" of {entryOrGuid, source_type, event_id} which identifies a script line (uniquely)
+// Value -> The recursion count for that specific event
+thread_local std::unordered_map<std::tuple<int32_t, uint8_t, uint32_t>, uint32_t, TupleHasher> g_smartScriptEventMap;
+
+// The RAII guard to manage recursion depth. It now also handles the entry checks.
+struct SmartScriptProcessorGuard
+{
+    std::tuple<int32_t, uint8_t, uint32_t> m_key;
+    bool m_initialized; // Flag to ensure destructor only runs if constructor succeeded
+
+    SmartScriptProcessorGuard(const SmartScriptHolder& e) : m_initialized(false)
+    {
+        // 1. Check global recursion depth
+        if (g_smartScriptGlobalDepth >= MAX_GLOBAL_RECURSION_DEPTH)
+        {
+            LOG_ERROR("sql.sql", "SmartScript: Terminating script processing - Exceeded max global recursion depth of {}. Problem in script Entry/GUID: {}, SourceType: {}, Event: {}.", MAX_GLOBAL_RECURSION_DEPTH, e.entryOrGuid, e.source_type, e.event_id);
+            return;
+        }
+
+        // Create a unique key for the event
+        m_key = std::make_tuple(e.entryOrGuid, e.source_type, e.event_id);
+
+        // 2. Check per-event recursion depth
+        // Use .find() to avoid creating a map entry just for checking
+        auto it = g_smartScriptEventMap.find(m_key);
+        uint32_t currentEventDepth = (it != g_smartScriptEventMap.end()) ? it->second : 0;
+
+        if (currentEventDepth >= MAX_PER_EVENT_RECURSION)
+        {
+            LOG_ERROR("sql.sql", "SmartScript: Terminating script processing - Exceeded max per-event recursion of {}. Infinite loop detected for script Entry/GUID: {}, SourceType: {}, Event: {}.", MAX_PER_EVENT_RECURSION, e.entryOrGuid, e.source_type, e.event_id);
+            return;
+        }
+
+        // All checks passed, now we can safely increment the counters
+        ++g_smartScriptGlobalDepth;
+        g_smartScriptEventMap[m_key]++;
+        m_initialized = true; // Mark as successfully initialized
+    }
+
+    ~SmartScriptProcessorGuard()
+    {
+        // Only run the cleanup logic if the constructor succeeded
+        if (!m_initialized)
+            return;
+
+        // Decrement the global counter
+        --g_smartScriptGlobalDepth;
+
+        // Find our event in the map
+        auto it = g_smartScriptEventMap.find(m_key);
+        if (it != g_smartScriptEventMap.end()) // Should always be true if initialized
+        {
+            // Decrement the specific event counter, and if it reaches zero,
+            // erase it from the map to plug the memory leak.
+            if (--(it->second) == 0)
+                g_smartScriptEventMap.erase(it);
+        }
+    }
+
+    // Public method to check if the guard was successfully initialized
+    bool IsValid() const { return m_initialized; }
+};
+
 SmartScript::SmartScript()
 {
     go = nullptr;
@@ -4038,6 +4136,14 @@ void SmartScript::GetWorldObjectsInDist(ObjectVector& targets, float dist) const
 
 void SmartScript::ProcessEvent(SmartScriptHolder& e, Unit* unit, uint32 var0, uint32 var1, bool bvar, SpellInfo const* spell, GameObject* gob)
 {
+    // The SmartScriptProcessorGuard now handles all recursion checks in its constructor.
+    SmartScriptProcessorGuard guard(e);
+
+    // If the guard is not valid, it means a recursion limit was hit and an error
+    // was already logged. We should stop processing this event immediately.
+    if (!guard.IsValid())
+        return;
+
     if (!e.active && e.GetEventType() != SMART_EVENT_LINK)
         return;
 
