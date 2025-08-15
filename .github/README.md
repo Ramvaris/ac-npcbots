@@ -10,7 +10,7 @@ The original code is based on MaNGOS, TrinityCore, and SunwellCore and has since
 
 This fork is a modified version of it.
 
-## What is differen?
+## What is different?
 
   1. Customized fixes to some problems that will be successively removed if the original packages get updates
   2. Pre-Configured Modules in a working state for this version, namely:
