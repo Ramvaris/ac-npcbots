@@ -33,7 +33,7 @@ This fork is a modified version of it.
 
      Info: Some of those mods need NPCs to be added! So check the FAQs on their site to set them up in a correct way!
        
-  6. Some Guides and LUA Scripts, namely:
+  5. Some Guides and LUA Scripts, namely:
      - How to make Old World Flying possible in 3.3.5a and before
 
 ## Installation
