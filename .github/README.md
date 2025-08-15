@@ -1,20 +1,14 @@
 # ![logo](https://raw.githubusercontent.com/azerothcore/azerothcore.github.io/master/images/logo-github.png) AzerothCore
 
-[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-4baaaa.svg)](CODE_OF_CONDUCT.md)
-## Build Status
-
-3.3.5
-:------------:
-[![nopch-build](https://github.com/trickerer/AzerothCore-wotlk-with-NPCBots/actions/workflows/core-build-nopch.yml/badge.svg?branch=npcbots_3.3.5)](https://github.com/trickerer/AzerothCore-wotlk-with-NPCBots/actions/workflows/core-build-nopch.yml)
-[![windows-build](https://github.com/trickerer/AzerothCore-wotlk-with-NPCBots/actions/workflows/windows_build.yml/badge.svg)](https://github.com/trickerer/AzerothCore-wotlk-with-NPCBots/actions/workflows/windows_build.yml)
-
 ## Introduction
 
 AzerothCore is an open-source game server application and framework designed for hosting massively multiplayer online role-playing games (MMORPGs). It is based on the popular MMORPG World of Warcraft (WoW) and seeks to recreate the gameplay experience of the original game from patch 3.3.5a.
 
 The original code is based on MaNGOS, TrinityCore, and SunwellCore and has since then had extensive development to improve stability, in-game mechanics, and modularity to the game. AC has also grown into a community-driven project with a significant number of contributors and developers. It is written in C++ and provides a solid foundation for creating private servers that mimic the mechanics and behavior of the official WoW servers.
 
-[NPCBots](https://github.com/trickerer/Trinity-Bots) is AzerothCore mod.
+[NPCBots](https://github.com/trickerer/Trinity-Bots) is an AzerothCore mod from Trickerer.
+
+This fork is a modified version of it.
 
 
 ## Installation
@@ -35,13 +29,15 @@ For help requests, it is recommended to ask your question on [StackOverflow](htt
 
 NPCBots issues can be reported via the [Github issue tracker](https://github.com/trickerer/Trinity-Bots/issues/).
 
+Issues with my specific fork can be reported via [Github issue tracker](https://github.com/ramvaris/AzerothCore-wotlk-with-NPCBots/issues/).
+
 Please take the time to review existing issues before submitting your own to
 prevent duplicates.
 
 
 ## Submitting fixes
 
-C++ fixes are submitted as [pull requests](https://github.com/trickerer/Azerothcore-wotlk-with-NPCBots/pulls).
+C++ fixes are submitted as [pull requests](https://github.com/ramvaris/Azerothcore-wotlk-with-NPCBots/pulls).
 
 
 You can check the [authors](https://github.com/azerothcore/azerothcore-wotlk/blob/master/AUTHORS) file for more details.
