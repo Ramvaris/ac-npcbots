@@ -39,6 +39,11 @@ This fork is a modified version of it.
   5. (NOT INCLUDED IN THE REPO) I adapted a multitude of things on my server. If you are interested, then let me know. Many of them include .dbc edits that have to be delivered in a .mpq file to the client. These are:
      - Changing the creation time of all items to 0,5s for all professions - except cooking since I forgot that and was to lazy to fix the spell.dbc again. This also goes for gathering (Mining, Skinning, Herbalism).
      - Adding an own faction that allows buying talent points after reaching exalted (with small daily quests, etc.)
+       <img width="1212" height="484" alt="image" src="https://github.com/user-attachments/assets/6a7dc385-7961-4e84-99f2-0518cc1c4760" />
+       <img width="760" height="1030" alt="image" src="https://github.com/user-attachments/assets/cd8dcbcd-750f-4ce6-a7d1-038a722595da" />
+       <img width="794" height="996" alt="image" src="https://github.com/user-attachments/assets/6dc3ff7a-bf9f-4426-a55f-4a9e98cc61a1" />
+       <img width="787" height="981" alt="image" src="https://github.com/user-attachments/assets/26897544-4ec5-4d79-94c7-be5d21ddfc40" />
+
      - Changing and adding a range of spells to easen up the life of solo players. They are added & managed by an additional LUA-Script.
         - Everyone gets Aspect of the Uber Cheetah (40% Movespeed, No Daze, Usable with other Aspects if you are a Hunter)
         - Everyone gets stealth with 0 Second Cooldown
@@ -46,12 +51,23 @@ This fork is a modified version of it.
         - Everyone gets a special levitation that holds unlimited (until clicked away), only works on themselves and doesn't break with damage or mounting up
         - Everyone gets a self-cast detect invisibility forever. It's unfair if only warlocks can see everything - and be honest - if you are alone there is no other way.
         - Shamans have an adapted Ghost Wolf Form that can be used 'inside' like in buildings, instances, etc.
+      
+       <img width="320" height="93" alt="image" src="https://github.com/user-attachments/assets/86c4f2f5-8004-40b4-9bdd-01b33c28423a" />
+       <img width="272" height="194" alt="image" src="https://github.com/user-attachments/assets/461e3058-e1d6-413e-8e5f-06d772b8be4c" />
+
      - Added a vampiric heal (Spell and LUA Script combination) for classes that are bad at soloing to allow them for more versatility
      - Added commands to summon the Reagent Bank NPC or a Vendor NPC to sell & repair for 1 minute to not having to return to the city every 5 minutes
-     - Added a function to Mend Pet (Rank 1) that let's your pet grow until it is de-summoned by mounting up, dismissing it or changing the instance. For more epicness.
-     - Changed the Hunters minimum range so there is no dead zone (Melee to Ranged Auto Attack is instantly and skills can be used in melee range)
+        <img width="757" height="427" alt="image" src="https://github.com/user-attachments/assets/461e2b8a-43f8-400d-9f86-5ce283b417e7" />
+
+     - Added a function to Mend Pet (Rank 1) that let's your pet grow until it is de-summoned by mounting up, dismissing it or changing the instance. For more epicness. Could also be included as command.
+        <img width="807" height="1271" alt="image" src="https://github.com/user-attachments/assets/f8e8f868-2c32-48a8-b060-7e9cf2a31bbc" />
+        
+     - Changed the Hunters (or ranged attacks in general) minimum range so there is no dead zone (Melee to Ranged Auto Attack is instantly and skills can be used in melee range)
+        <img width="518" height="280" alt="image" src="https://github.com/user-attachments/assets/3154776d-52bf-4a48-951b-24cbce03c395" />
+
      - Added an NPC with a custom LUA-script to allow teleporting to all big cities (faction-specific), dungeons or sightseeing points (like old ironforge) for some coinage. Also adds the extra talent points or reset instances (for coin!).
      - More stuff I just forgot - including some balancing fixes.
+
 
 ## Installation
 
