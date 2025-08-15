@@ -53,7 +53,7 @@ This fork is a modified version of it.
      - Added an NPC with a custom LUA-script to allow teleporting to all big cities (faction-specific), dungeons or sightseeing points (like old ironforge) for some coinage. Also adds the extra talent points or reset instances (for coin!).
      - More stuff I just forgot - including some balancing fixes.
 
-	 👁️ For a full list with screenshots, [check out the Features Showcase!](FEATURES.md)
+	 👁️ For a site with some screenshots of these things, [check out the Features Showcase!](FEATURES.md)
 
 ## Installation
 
