@@ -1,5 +1,5 @@
 ---
-name: Feature request
+name: Specific feature request
 about: Suggest a feature specific to this fork
 title: "[FR]"
 labels: ''
