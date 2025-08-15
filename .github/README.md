@@ -17,7 +17,7 @@ This fork is a modified version of it.
   2. Permanent additions to the core code, namely:
      - Enabling server-side old world flying
        
-  4. Pre-Configured Modules in a working state for this version, namely:
+  3. Pre-Configured Modules in a working state for this version, namely:
      - [Autobalancer](https://github.com/azerothcore/mod-autobalance)
      - [Eluna API](https://github.com/azerothcore/mod-eluna)
      - [Gain Honor from killing Guards](https://github.com/azerothcore/mod-gain-honor-guard)
@@ -33,8 +33,24 @@ This fork is a modified version of it.
 
      Info: Some of those mods need NPCs to be added! So check the FAQs on their site to set them up in a correct way!
        
-  5. Some Guides and LUA Scripts, namely:
+  4. Some Guides and LUA Scripts, namely:
      - How to make Old World Flying possible in 3.3.5a and before
+    
+  5. (NOT INCLUDED IN THE REPO) I adapted a multitude of things on my server. If you are interested, then let me know. These are:
+     - Adding an own faction that allows buying talent points after reaching exalted (with small daily quests, etc.)
+     - Changing and adding a range of spells to easen up the life of solo players. They are added & managed by an additional LUA-Script.
+        - Everyone gets Aspect of the Uber Cheetah (40% Movespeed, No Daze, Usable with other Aspects if you are a Hunter)
+        - Everyone gets stealth with 0 Second Cooldown
+        - Everyone gets the Aqua Form of the Druid
+        - Everyone gets a special levitation that holds unlimited (until clicked away), only works on themselves and doesn't break with damage or mounting up
+        - Everyone gets a self-cast detect invisibility forever. It's unfair if only warlocks can see everything - and be honest - if you are alone there is no other way.
+        - Shamans have an adapted Ghost Wolf Form that can be used 'inside' like in buildings, instances, etc.
+     - Added a vampiric heal (Spell and LUA Script combination) for classes that are bad at soloing to allow them for more versatility
+     - Added commands to summon the Reagent Bank NPC or a Vendor NPC to sell & repair for 1 minute to not having to return to the city every 5 minutes
+     - Added a function to Mend Pet (Rank 1) that let's your pet grow until it is de-summoned by mounting up, dismissing it or changing the instance. For more epicness.
+     - Changed the Hunters minimum range so there is no dead zone (Melee to Ranged Auto Attack is instantly and skills can be used in melee range)
+     - Added an NPC with a custom LUA-script to allow teleporting to all big cities (faction-specific), dungeons or sightseeing points (like old ironforge) for some coinage. Also adds the extra talent points or reset instances (for coin!).
+     - More stuff I just forgot - including some balancing fixes.
 
 ## Installation
 
