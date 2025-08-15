@@ -1,6 +1,6 @@
 To enable flying in the old world you need two things.
 
-##First:
+First:
 
 	You need to edit the SpellInfo.cpp of your server core. There is no other way. Not even with hooks as far as I know.
 	Search for this if-clause:
@@ -32,7 +32,7 @@ To enable flying in the old world you need two things.
 	
 	Re-Compile the server.
 	
-##Second:
+Second:
 
 	You need to add a possibility for the client to mount on a flying mount. The client has it's own checks, so you can only do it by one of those ways:
 		1. Edit the spell.dbc file in the /data/dbc folder for the mounts that should be allowed to be cast (All mounts are basically spells!) in the old world. Restart the server afterwards.
