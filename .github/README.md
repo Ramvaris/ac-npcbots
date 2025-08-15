@@ -13,9 +13,13 @@ This fork is a modified version of it.
 ## What is different?
 
   1. Customized fixes to some problems that will be successively removed if the original packages get updates
-  2. Pre-Configured Modules in a working state for this version, namely:
+
+  2. Permanent additions to the core code, namely:
+     - Enabling server-side old world flying
+       
+  4. Pre-Configured Modules in a working state for this version, namely:
      - Autobalancer
-     - Eluna API 
+     - Eluna API(https://github.com/azerothcore/mod-eluna)
      - Gain Honor from killing Guards
      - Guildhouse
      - Instance Reset
@@ -26,7 +30,8 @@ This fork is a modified version of it.
      - Solo LFG
      - Transmog
      - Warlock Pet Rename
-  3. Some Guides and LUA Scripts, namely:
+       
+  5. Some Guides and LUA Scripts, namely:
      - How to make Old World Flying possible in 3.3.5a and before
 
 ## Installation
