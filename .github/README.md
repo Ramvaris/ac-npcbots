@@ -53,21 +53,7 @@ This fork is a modified version of it.
      - Added an NPC with a custom LUA-script to allow teleporting to all big cities (faction-specific), dungeons or sightseeing points (like old ironforge) for some coinage. Also adds the extra talent points or reset instances (for coin!).
      - More stuff I just forgot - including some balancing fixes.
 
-    <details>
-      <summary>Click here for a preview of custom features (Image heavy)!</summary>
-     **Screenshots**
-       <img width="1212" height="484" alt="image" src="https://github.com/user-attachments/assets/6a7dc385-7961-4e84-99f2-0518cc1c4760" />
-       <img width="760" height="1030" alt="image" src="https://github.com/user-attachments/assets/cd8dcbcd-750f-4ce6-a7d1-038a722595da" />
-       <img width="794" height="996" alt="image" src="https://github.com/user-attachments/assets/6dc3ff7a-bf9f-4426-a55f-4a9e98cc61a1" />
-       <img width="787" height="981" alt="image" src="https://github.com/user-attachments/assets/26897544-4ec5-4d79-94c7-be5d21ddfc40" />
-	     <img width="320" height="93" alt="image" src="https://github.com/user-attachments/assets/86c4f2f5-8004-40b4-9bdd-01b33c28423a" />
-       <img width="272" height="194" alt="image" src="https://github.com/user-attachments/assets/461e3058-e1d6-413e-8e5f-06d772b8be4c" />
-	     <img width="757" height="427" alt="image" src="https://github.com/user-attachments/assets/461e2b8a-43f8-400d-9f86-5ce283b417e7" />
-       <img width="807" height="1271" alt="image" src="https://github.com/user-attachments/assets/f8e8f868-2c32-48a8-b060-7e9cf2a31bbc" />
-       <img width="518" height="280" alt="image" src="https://github.com/user-attachments/assets/3154776d-52bf-4a48-951b-24cbce03c395" />
-       <img width="1212" height="484" alt="image" src="https://github.com/user-attachments/assets/6a7dc385-7961-4e84-99f2-0518cc1c4760" />
-       <img width="760" height="1030" alt="image" src="https://github.com/user-attachments/assets/cd8dcbcd-750f-4ce6-a7d1-038a722595da" />
-   </details>
+	 👁️ For a full list with screenshots, [check out the Features Showcase!](FEATURES.md)
 
 ## Installation
 
