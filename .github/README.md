@@ -16,6 +16,8 @@ This fork is a modified version of it.
 
   2. Permanent additions to the core code, namely:
      - Enabling server-side old world flying
+    
+     Info: If you don't want this feature then don't fret. As long as you don't give the clients a way to summon a flying mount in the old zones the server-side change won't change anything.
        
   3. Pre-Configured Modules in a working state for this version, namely:
      - [Autobalancer](https://github.com/azerothcore/mod-autobalance)
@@ -31,12 +33,13 @@ This fork is a modified version of it.
      - [Transmog](https://github.com/azerothcore/mod-transmog)
      - [Warlock Pet Rename](https://github.com/silviu20092/mod-warlock-pet-rename)
 
-     Info: Some of those mods need NPCs to be added! So check the FAQs on their site to set them up in a correct way!
+     Info #1: Some of those mods need NPCs to be added! So check the FAQs on their site to set them up in a correct way!
+     Info #2: If you don't want those modules then just delete them before compiling!
        
-  4. Some Guides and LUA Scripts, namely:
+  5. Some Guides and LUA Scripts, namely:
      - How to make Old World Flying possible in 3.3.5a and before
     
-  5. (NOT INCLUDED IN THE REPO) I adapted a multitude of things on my server. If you are interested, then let me know. Many of them include .dbc edits that have to be delivered in a .mpq file to the client. These are:
+  6. (NOT INCLUDED IN THE REPO) I adapted a multitude of things on my server. If you are interested, then let me know. Many of them include .dbc edits that have to be delivered in a .mpq file to the client. These are:
      - Changing the creation time of all items to 0,5s for all professions - except cooking since I forgot that and was to lazy to fix the spell.dbc again. This also goes for gathering (Mining, Skinning, Herbalism).
      - Adding an own faction that allows buying talent points after reaching exalted (with small daily quests, etc.)
      - Changing and adding a range of spells to easen up the life of solo players. They are added & managed by an additional LUA-Script.
