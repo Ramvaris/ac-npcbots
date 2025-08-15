@@ -10,6 +10,24 @@ The original code is based on MaNGOS, TrinityCore, and SunwellCore and has since
 
 This fork is a modified version of it.
 
+## What is differen?
+
+  1. Customized fixes to some problems that will be successively removed if the original packages get updates
+  2. Pre-Configured Modules in a working state for this version, namely:
+     - Autobalancer
+     - Eluna API 
+     - Gain Honor from killing Guards
+     - Guildhouse
+     - Instance Reset
+     - PVP Titles
+     - Random Enchants
+     - Reagent Bank (By Character)
+     - Skip DK Starting Area
+     - Solo LFG
+     - Transmog
+     - Warlock Pet Rename
+  3. Some Guides and LUA Scripts, namely:
+     - How to make Old World Flying possible in 3.3.5a and before
 
 ## Installation
 
