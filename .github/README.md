@@ -18,20 +18,22 @@ This fork is a modified version of it.
      - Enabling server-side old world flying
        
   4. Pre-Configured Modules in a working state for this version, namely:
-     - Autobalancer
-     - Eluna API(https://github.com/azerothcore/mod-eluna)
-     - Gain Honor from killing Guards
-     - Guildhouse
-     - Instance Reset
-     - PVP Titles
-     - Random Enchants
-     - Reagent Bank (By Character)
-     - Skip DK Starting Area
-     - Solo LFG
-     - Transmog
-     - Warlock Pet Rename
+     - [Autobalancer](https://github.com/azerothcore/mod-autobalance)
+     - [Eluna API](https://github.com/azerothcore/mod-eluna)
+     - [Gain Honor from killing Guards](https://github.com/azerothcore/mod-gain-honor-guard)
+     - [Guildhouse](https://github.com/azerothcore/mod-guildhouse)
+     - [Instance Reset](https://github.com/azerothcore/mod-instance-reset)
+     - [PVP Titles](https://github.com/azerothcore/mod-pvp-titles)
+     - [Random Enchants](https://github.com/azerothcore/mod-random-enchants)
+     - [Reagent Bank (By Character)](https://github.com/ZhengPeiRu21/mod-reagent-bank)
+     - [Skip DK Starting Area](https://github.com/azerothcore/mod-skip-dk-starting-area)
+     - [Solo LFG](https://github.com/azerothcore/mod-solo-lfg)
+     - [Transmog](https://github.com/azerothcore/mod-transmog)
+     - [Warlock Pet Rename](https://github.com/silviu20092/mod-warlock-pet-rename)
+
+     #Info: Some of those mods need NPCs to be added! So check the FAQs on their site to set them up in a correct way!
        
-  5. Some Guides and LUA Scripts, namely:
+  6. Some Guides and LUA Scripts, namely:
      - How to make Old World Flying possible in 3.3.5a and before
 
 ## Installation
