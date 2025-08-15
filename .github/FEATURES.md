@@ -1,4 +1,4 @@
-Some screenshots of the NOT-INCLUDED-FEATURES:
+Some unsorted screenshots of the NOT-INCLUDED-FEATURES:
 	   <img width="1212" height="484" alt="image" src="https://github.com/user-attachments/assets/6a7dc385-7961-4e84-99f2-0518cc1c4760" />
        <img width="760" height="1030" alt="image" src="https://github.com/user-attachments/assets/cd8dcbcd-750f-4ce6-a7d1-038a722595da" />
        <img width="794" height="996" alt="image" src="https://github.com/user-attachments/assets/6dc3ff7a-bf9f-4426-a55f-4a9e98cc61a1" />
@@ -10,4 +10,6 @@ Some screenshots of the NOT-INCLUDED-FEATURES:
        <img width="807" height="1271" alt="image" src="https://github.com/user-attachments/assets/f8e8f868-2c32-48a8-b060-7e9cf2a31bbc" />
        <img width="518" height="280" alt="image" src="https://github.com/user-attachments/assets/3154776d-52bf-4a48-951b-24cbce03c395" />
 	   <img width="645" height="115" alt="image" src="https://github.com/user-attachments/assets/afb7619d-d53f-44bd-a8bf-c60935996d17" />
+	   <img width="437" height="239" alt="image" src="https://github.com/user-attachments/assets/d3b6eef2-29c8-4fd3-88e6-0d0b3ebce2a8" />
+	   <img width="693" height="100" alt="image" src="https://github.com/user-attachments/assets/d4729d15-3a52-4f9c-b969-df1bc66f2926" />
 
