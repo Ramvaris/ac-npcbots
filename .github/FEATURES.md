@@ -12,4 +12,7 @@ Some unsorted screenshots of the NOT-INCLUDED-FEATURES:
 	   <img width="645" height="115" alt="image" src="https://github.com/user-attachments/assets/afb7619d-d53f-44bd-a8bf-c60935996d17" />
 	   <img width="437" height="239" alt="image" src="https://github.com/user-attachments/assets/d3b6eef2-29c8-4fd3-88e6-0d0b3ebce2a8" />
 	   <img width="693" height="100" alt="image" src="https://github.com/user-attachments/assets/d4729d15-3a52-4f9c-b969-df1bc66f2926" />
+	   <img width="2621" height="1162" alt="image" src="https://github.com/user-attachments/assets/633a02ee-05cc-4c8f-8150-ee833bbcb14b" />
+	   <img width="2366" height="1124" alt="image" src="https://github.com/user-attachments/assets/e66af70a-bb49-42c7-b595-d314f0172dda" />
+
 
