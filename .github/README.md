@@ -36,7 +36,7 @@ This fork is a modified version of it.
      Info #1: Some of those mods need NPCs to be added! So check the FAQs on their site to set them up in a correct way!
      Info #2: If you don't want those modules then just delete them before compiling!
        
-  5. Some Guides and LUA Scripts, namely:
+  5. Some [Guides](https://github.com/Ramvaris/AzerothCore-wotlk-with-NPCBots/tree/npcbots_3.3.5/guides) and [LUA Scripts](https://github.com/Ramvaris/AzerothCore-wotlk-with-NPCBots/tree/npcbots_3.3.5/guides), namely:
      - How to make Old World Flying possible in 3.3.5a and before
     
   6. (NOT INCLUDED IN THE REPO) I adapted a multitude of things on my server. If you are interested, then let me know. Many of them include .dbc edits that have to be delivered in a .mpq file to the client. These are:
