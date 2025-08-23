@@ -658,6 +658,14 @@ void Map::RemoveFromMap(T* obj, bool remove)
 {
     obj->RemoveFromWorld();
 
+    // This should prevent double removals and therefore crashes under heavy-load
+    if (!obj->IsInGrid())
+    {
+        // Log detailed information about the object that triggered this supposedly impossible state.
+        LOG_ERROR("maps", "Object (GUID: {}, Entry: {}, Type: {}) was not in grid when it should have been. Aborting operation.", obj->GetGUID().ToString(), obj->GetEntry(), obj->GetTypeId());
+        return;
+    }
+
     obj->RemoveFromGrid();
 
     obj->ResetMap();
