@@ -3,8 +3,11 @@
 ## Sync / Update / Compilation Status
 
 Sync: The last sync with the NPCBot parent was on 2025/08/30.
+
 Update: The last module update was on 2025/08/30 [AutoBalancer, Eluna].
+
 Compilation: It was successfully compiled on a Windows 11 Pro (64Bit) machine.
+
 
 ## Introduction
 
