@@ -1,5 +1,11 @@
 # ![logo](https://raw.githubusercontent.com/azerothcore/azerothcore.github.io/master/images/logo-github.png) AzerothCore
 
+## Sync / Update / Compilation Status
+
+Sync: The last sync with the NPCBot parent was on 2025/08/30.
+Update: The last module update was on 2025/08/30 [AutoBalancer, Eluna].
+Compilation: It was successfully compiled on a Windows 11 Pro (64Bit) machine.
+
 ## Introduction
 
 AzerothCore is an open-source game server application and framework designed for hosting massively multiplayer online role-playing games (MMORPGs). It is based on the popular MMORPG World of Warcraft (WoW) and seeks to recreate the gameplay experience of the original game from patch 3.3.5a.
