@@ -46,9 +46,9 @@
 #include <unordered_map> // Make sure this is included
 
 // Maximum allowed nested calls of any kind to prevent a stack overflow
-#define MAX_GLOBAL_RECURSION_DEPTH 20
+#define MAX_GLOBAL_RECURSION_DEPTH 25
 // Maximum allowed nested calls for the same event to prevent simple infinite loops
-#define MAX_PER_EVENT_RECURSION 3
+#define MAX_PER_EVENT_RECURSION 5
 
 // Global depth counter variable
 thread_local uint32_t g_smartScriptGlobalDepth = 0;
