@@ -1,124 +1,108 @@
-# ![logo](https://raw.githubusercontent.com/azerothcore/azerothcore.github.io/master/images/logo-github.png) AzerothCore
+<div align="center">
+  <h1>ac-npcbots</h1>
+  <p>Fork with integrated <strong>NPCBots</strong>, curated modules and custom solo-friendly enhancements.</p>
+  <sub>
+    Last sync with NPCBots parent: <strong>2025-09-05</strong><br/>
+    Last module refresh: <strong>2025-09-05</strong> (Autobalancer, Eluna)<br/>
+    Last successful compile: <strong>Windows 11 Pro x64</strong>
+  </sub>
+</div>
 
-## Sync / Update / Compilation Status
+---
 
-Sync: The last sync with the NPCBot parent was on 2025/08/30.
+## 🚀 Overview
 
-Update: The last module update was on 2025/08/30 [AutoBalancer, Eluna].
+Minimal, opinionated fork of AzerothCore (WotLK 3.3.5a) focused on: 
+* Integrated NPCBots (Trickerer) for solo/group simulation
+* Pre-configured quality modules
+* Solo-play QoL tweaks & experimental gameplay adjustments
 
-Compilation: It was successfully compiled on a Windows 11 Pro (64Bit) machine.
+References:
+* AzerothCore: https://github.com/azerothcore/azerothcore-wotlk
+* NPCBots (original mod): https://github.com/trickerer/Trinity-Bots
 
+---
 
-## Introduction
+## 🔧 Differences & Additions
 
-AzerothCore is an open-source game server application and framework designed for hosting massively multiplayer online role-playing games (MMORPGs). It is based on the popular MMORPG World of Warcraft (WoW) and seeks to recreate the gameplay experience of the original game from patch 3.3.5a.
+1. Temporary custom fixes (removed when upstreamed)  
+2. Core addition: Old world flying (server-side enable)  
+   > If players don't have a way to mount, nothing changes. Safe to ignore if unwanted.
+3. Bundled & enabled modules:
+   - Autobalancer
+   - Eluna API
+   - Gain Honor from killing Guards
+   - Guildhouse
+   - Instance Reset
+   - PVP Titles
+   - Random Enchants
+   - Reagent Bank (By Character)
+   - Skip DK Starting Area
+   - Solo LFG
+   - Transmog
+   - Warlock Pet Rename
+   Info:
+   - Some require extra NPCs (see each module's docs)
+   - Don't want them? Delete before compiling
+5. Guides & scripts (external repo paths retained):
+   - Old World Flying guide (3.3.5a and earlier)
+6. Not included but implemented privately (ask if interested; many require client DBC/MPQ changes):
+   - Faster crafting/gathering (0.5s)
+   - Reputation-based extra talent vendor & dailies
+   - Solo-centric spell tweaks (mobility, utility, invisibility, levitation, indoor ghost wolf)
+   - Vampiric sustain ability for weak solo specs
+   - Temporary summon: reagent bank / repair vendor
+   - Growing pet via Mend Pet Rank 1
+   - No dead zone for ranged auto & abilities
+   - Teleporter NPC (cities, dungeons, curiosities) + instance reset + talent service
+   - Additional balancing adjustments (uncatalogued)
 
-The original code is based on MaNGOS, TrinityCore, and SunwellCore and has since then had extensive development to improve stability, in-game mechanics, and modularity to the game. AC has also grown into a community-driven project with a significant number of contributors and developers. It is written in C++ and provides a solid foundation for creating private servers that mimic the mechanics and behavior of the official WoW servers.
+👁️ Screenshots: See `FEATURES.md`.
 
-[NPCBots](https://github.com/trickerer/Trinity-Bots) is an AzerothCore mod from Trickerer.
+---
 
-This fork is a modified version of it.
+## 📥 Installation
 
-## What is different?
+Follow the standard AzerothCore installation flow:  
+http://www.azerothcore.org/wiki/Installation
 
-  1. Customized fixes to some problems that will be successively removed if the original packages get updates
+NPCBots setup specifics:  
+https://github.com/trickerer/Trinity-Bots#npcbot-mod-installation
 
-  2. Permanent additions to the core code, namely:
-     - Enabling server-side old world flying
-    
-     Info: If you don't want this feature then don't fret. As long as you don't give the clients a way to summon a flying mount in the old zones the server-side change won't change anything.
-       
-  3. Pre-Configured Modules in a working state for this version, namely:
-     - [Autobalancer](https://github.com/azerothcore/mod-autobalance)
-     - [Eluna API](https://github.com/azerothcore/mod-eluna)
-     - [Gain Honor from killing Guards](https://github.com/azerothcore/mod-gain-honor-guard)
-     - [Guildhouse](https://github.com/azerothcore/mod-guildhouse)
-     - [Instance Reset](https://github.com/azerothcore/mod-instance-reset)
-     - [PVP Titles](https://github.com/azerothcore/mod-pvp-titles)
-     - [Random Enchants](https://github.com/azerothcore/mod-random-enchants)
-     - [Reagent Bank (By Character)](https://github.com/ZhengPeiRu21/mod-reagent-bank)
-     - [Skip DK Starting Area](https://github.com/azerothcore/mod-skip-dk-starting-area)
-     - [Solo LFG](https://github.com/azerothcore/mod-solo-lfg)
-     - [Transmog](https://github.com/azerothcore/mod-transmog)
-     - [Warlock Pet Rename](https://github.com/silviu20092/mod-warlock-pet-rename)
+After cloning: remove unwanted modules before building if necessary.
 
-     Info #1: Some of those mods need NPCs to be added! So check the FAQs on their site to set them up in a correct way!
-     Info #2: If you don't want those modules then just delete them before compiling!
-       
-  5. Some [Guides](https://github.com/Ramvaris/AzerothCore-wotlk-with-NPCBots/tree/npcbots_3.3.5/guides) and [LUA Scripts](https://github.com/Ramvaris/AzerothCore-wotlk-with-NPCBots/tree/npcbots_3.3.5/guides), namely:
-     - How to make Old World Flying possible in 3.3.5a and before
-    
-  6. (NOT INCLUDED IN THE REPO) I adapted a multitude of things on my server. If you are interested, then let me know. Many of them include .dbc edits that have to be delivered in a .mpq file to the client. These are:
-     - Changing the creation time of all items to 0,5s for all professions - except cooking since I forgot that and was to lazy to fix the spell.dbc again. This also goes for gathering (Mining, Skinning, Herbalism).
-     - Adding an own faction that allows buying talent points after reaching exalted (with small daily quests, etc.)
-     - Changing and adding a range of spells to easen up the life of solo players. They are added & managed by an additional LUA-Script.
-        - Everyone gets Aspect of the Uber Cheetah (40% Movespeed, No Daze, Usable with other Aspects if you are a Hunter)
-        - Everyone gets stealth with 0 Second Cooldown
-        - Everyone gets the Aqua Form of the Druid
-        - Everyone gets a special levitation that holds unlimited (until clicked away), only works on themselves and doesn't break with damage or mounting up
-        - Everyone gets a self-cast detect invisibility forever. It's unfair if only warlocks can see everything - and be honest - if you are alone there is no other way.
-        - Shamans have an adapted Ghost Wolf Form that can be used 'inside' like in buildings, instances, etc.
-     - Added a vampiric heal (Spell and LUA Script combination) for classes that are bad at soloing to allow them for more versatility
-     - Added commands to summon the Reagent Bank NPC or a Vendor NPC to sell & repair for 1 minute to not having to return to the city every 5 minutes
-     - Added a function to Mend Pet (Rank 1) that let's your pet grow until it is de-summoned by mounting up, dismissing it or changing the instance. For more epicness. Could also be included as command.
-     - Changed the Hunters (or ranged attacks in general) minimum range so there is no dead zone (Melee to Ranged Auto Attack is instantly and skills can be used in melee range)
-     - Added an NPC with a custom LUA-script to allow teleporting to all big cities (faction-specific), dungeons or sightseeing points (like old ironforge) for some coinage. Also adds the extra talent points or reset instances (for coin!).
-     - More stuff I just forgot - including some balancing fixes.
+---
 
-	 👁️ For a site with some screenshots of these things, [check out the Features Showcase!](FEATURES.md)
+## 🐞 Issues & Contributions
 
-## Installation
+NPCBots issues: https://github.com/trickerer/Trinity-Bots/issues/  
+Fork-specific issues: https://github.com/ramvaris/AzerothCore-wotlk-with-NPCBots/issues/  
+PRs (C++/scripts): https://github.com/ramvaris/Azerothcore-wotlk-with-NPCBots/pulls
 
-Installation instructions are available [here](http://www.azerothcore.org/wiki/Installation).
+Check existing reports first to avoid duplicates.
 
-NPCBots installation guide is available in the [NPCBots Readme](https://github.com/trickerer/Trinity-Bots#npcbot-mod-installation).
+---
 
+## 📚 References
 
-## Support
+* AzerothCore upstream: azerothcore/azerothcore-wotlk
+* NPCBots: trickerer/Trinity-Bots
+* Modules: see links in each module's own repository
 
-AzerothCore self-made wiki probably has a lot of answers for you.
+---
 
-For help requests, it is recommended to ask your question on [StackOverflow](https://stackoverflow.com/questions/tagged/azerothcore) and link it in [our chat](https://discordapp.com/channels/217589275766685707/284406375495368704).
+## 📄 License
 
+See `LICENSE`. Upstream components retain their original licenses (AGPLv3 / GPLv2 lineage where applicable).
 
-## Reporting issues
+---
 
-NPCBots issues can be reported via the [Github issue tracker](https://github.com/trickerer/Trinity-Bots/issues/).
+## ⚠️ Notice
 
-Issues with my specific fork can be reported via [Github issue tracker](https://github.com/ramvaris/AzerothCore-wotlk-with-NPCBots/issues/).
+Not affiliated with or endorsed by Blizzard Entertainment. Educational/research use recommended.
 
-Please take the time to review existing issues before submitting your own to
-prevent duplicates.
+---
 
+## 🙈 Screens & Extras
 
-## Submitting fixes
-
-C++ fixes are submitted as [pull requests](https://github.com/ramvaris/Azerothcore-wotlk-with-NPCBots/pulls).
-
-
-You can check the [authors](https://github.com/azerothcore/azerothcore-wotlk/blob/master/AUTHORS) file for more details.
-
-## Important Links
-
-- [NPCBots Readme](https://github.com/trickerer/Trinity-Bots/)
-
-- [Website](http://www.azerothcore.org/)
-- [AzerothCore catalogue](http://www.azerothcore.org/catalogue.html  "Modules, tools, and other stuff for AzerothCore") (modules, tools, etc...)
-- [Our Discord server](https://discord.gg/gkt4y2x)
-- [Our wiki](http://www.azerothcore.org/wiki "Easy to use and developed by AzerothCore founder")
-- [Our forum](https://github.com/azerothcore/azerothcore-wotlk/discussions/)
-- [Our Facebook page](https://www.facebook.com/AzerothCore/)
-- [Our LinkedIn page](https://www.linkedin.com/company/azerothcore/)
-
-## License
-
-- The new AzerothCore source components are released under the [GNU AGPL v3](https://www.gnu.org/licenses/agpl-3.0.en.html)
-- The old sources based on MaNGOS/TrinityCore are released under the [GNU GPL v2](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
-
-It's important to note that AzerothCore is not an official Blizzard Entertainment product, and it is not affiliated with or endorsed by World of Warcraft or Blizzard Entertainment. AzerothCore does not in any case sponsor nor support illegal public servers. If you use this project to run an illegal public server and not for testing and learning it is your own personal choice.
-
-## Special thanks
-
-It's important to note that AzerothCore is not an official Blizzard Entertainment product, and it is not affiliated with or endorsed by World of Warcraft or Blizzard Entertainment. AzerothCore does not in any case sponsor nor support illegal public servers. If you use this project to run an illegal public server and not for testing and learning it is your own personal choice.
-
-[![JetBrains logo.](https://resources.jetbrains.com/storage/products/company/brand/logos/jetbrains.svg)](https://jb.gg/OpenSourceSupport)
+See `FEATURES.md` for unsorted screenshots of non-included optional tweaks.
