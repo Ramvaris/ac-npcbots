@@ -93,6 +93,7 @@ luaL_Reg GlobalMethods[] =
     // Getters
     { "GetLuaEngine", &LuaGlobalFunctions::GetLuaEngine },
     { "GetCoreName", &LuaGlobalFunctions::GetCoreName },
+    { "GetConfigValue", &LuaGlobalFunctions::GetConfigValue },
     { "GetRealmID", &LuaGlobalFunctions::GetRealmID },
     { "GetCoreVersion", &LuaGlobalFunctions::GetCoreVersion },
     { "GetCoreExpansion", &LuaGlobalFunctions::GetCoreExpansion },
@@ -941,7 +942,7 @@ ElunaRegister<GameObject> GameObjectMethods[] =
     { "GetLootState", &LuaGameObject::GetLootState },
     { "GetLootRecipient", &LuaGameObject::GetLootRecipient },
     { "GetLootRecipientGroup", &LuaGameObject::GetLootRecipientGroup },
-    { "GetDBTableGUIDLow", &LuaGameObject::GetDBTableGUIDLow },
+    { "GetSpawnId", &LuaGameObject::GetSpawnId },
 
     // Setters
     { "SetGoState", &LuaGameObject::SetGoState },
