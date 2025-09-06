@@ -2,8 +2,8 @@
   <h1>ac-npcbots</h1>
   <p>Fork with integrated <strong>NPCBots</strong>, curated modules and custom solo-friendly enhancements.</p>
   <sub>
-    Last sync with NPCBots parent: <strong>2025-09-05</strong><br/>
-    Last module refresh: <strong>2025-09-05</strong> (Autobalancer, Eluna)<br/>
+    Last sync with NPCBots parent: <strong>2025-09-06</strong><br/>
+    Last module refresh: <strong>2025-09-06</strong> (Eluna)<br/>
     Last successful compile: <strong>Windows 11 Pro x64</strong>
   </sub>
 </div>
